@@ -9,7 +9,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<'home' | 'translate' | 'practice' | 'progress'>('home');
 
   return (
-    <div className="size-full bg-white max-w-md mx-auto relative overflow-hidden">
+    <div className={`size-full bg-white relative overflow-hidden ${activeTab === 'practice' ? '' : 'max-w-md mx-auto'}`}>
       {/* Main Content */}
       <div className="h-full overflow-hidden">
         {activeTab === 'home' && (
