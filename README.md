@@ -1,11 +1,12 @@
 
   # ConnectSigns App Design Brief
 
-  This is a code bundle for ConnectSigns App Design Brief. The original project is available at https://www.figma.com/design/2G3jhQvG3NIgZzkNJIkl5Y/ConnectSigns-App-Design-Brief.
+  Fronted del proyecto - Curso: Interaccion Humano Computador
+  Profesor: Ciro Nuñez
 
-  ## Running the code
+  ## Para correr el fronted:
 
-  Run `npm i` to install the dependencies.
+  Ejecuta en el terminal `npm i` para instalar las dependencias.
 
-  Run `npm run dev` to start the development server.
+  Ejecuta en el terminal `npm run dev` para iniciar el servidor de desarrollo.
   
