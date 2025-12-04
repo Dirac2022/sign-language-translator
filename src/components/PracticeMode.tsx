@@ -219,7 +219,7 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
       // PASO 4: ACTUALIZAR DASHBOARD (Solo si es correcto)
       // ---------------------------------------------------------
       if (isCorrect) {
-        console.log("✅ ¡CORRECTO! Actualizando puntaje en la base de datos...");
+        console.log("¡CORRECTO! Actualizando puntaje en la base de datos...");
         
         try {
           const updateRes = await fetch("http://localhost:8000/update-progress", {
@@ -324,7 +324,7 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
 
     if (!isCameraOn) {
       return (
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "12px", color: "#888" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "12px", color: "#000" }}>
           <VideoOff style={{ width: "24px", height: "24px" }} />
           <span style={{ fontWeight: 500 }}>Enciende la cámara para comenzar</span>
         </div>
@@ -365,7 +365,7 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
       flexDirection: "column",
       height: "100vh",
       width: "100vw",
-      backgroundColor: "#0f172a",
+      backgroundColor: "#F2F2F7",
       overflow: "hidden"
     }}>
       {/* CSS para animaciones */}
@@ -381,9 +381,9 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
 
       {/* ========== HEADER ========== */}
       <div style={{
-        backgroundColor: "#1e293b",
+        backgroundColor: "#F2F2F7",
         padding: "12px 16px",
-        borderBottom: "1px solid #334155",
+        borderBottom: "1px solid #F2F2F7",
         flexShrink: 0
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
@@ -396,10 +396,10 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
             <ArrowLeft />
           </Button>
           <div>
-            <h2 style={{ fontWeight: 600, fontSize: "1.125rem", color: "white", margin: 0 }}>
+            <h2 style={{ fontWeight: 600, fontSize: "1.125rem", color: "black", margin: 0 }}>
               Modo Práctica
             </h2>
-            <p style={{ color: "#94a3b8", fontSize: "0.875rem", margin: 0 }}>
+            <p style={{ color: "#3c506dff", fontSize: "0.875rem", margin: 0 }}>
               Selecciona una seña y practica
             </p>
           </div>
@@ -419,7 +419,7 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
           width: "50%",
           display: "flex",
           flexDirection: "column",
-          borderRight: "1px solid #334155"
+          //borderRight: "1px solid #334155"
         }}>
           
           {/* Header de la seña seleccionada */}
@@ -428,14 +428,14 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
             alignItems: "center",
             justifyContent: "space-between",
             padding: "12px 16px",
-            backgroundColor: "rgba(30, 41, 59, 0.5)",
-            borderBottom: "1px solid #334155"
-          }}>
+            backgroundColor: "rgba(242, 242, 247, 0.1)",
+            // borderBottom: "1px solid #334155"
+          }}> 
             <div>
-              <span style={{ color: "#94a3b8", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+              <span style={{ color: "#3c506dff", fontSize: "0.85rem", fontWeight: "bold", textTransform: "uppercase", letterSpacing: "0.05em", paddingLeft: "15px"}}>
                 Aprende la seña
               </span>
-              <h3 style={{ color: "white", fontSize: "1.5rem", fontWeight: 700, margin: 0 }}>
+              <h3 style={{ color: "black", fontSize: "1.5rem", fontWeight: 700, margin: 0, paddingLeft: "15px" }}>
                 {selectedSign.toUpperCase()}
               </h3>
             </div>
@@ -449,7 +449,7 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
                 backgroundColor: "transparent",
                 border: "1px solid #475569",
                 borderRadius: "8px",
-                color: "#cbd5e1",
+                color: "#475569",
                 cursor: "pointer",
                 fontSize: "0.875rem"
               }}
@@ -462,12 +462,13 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
           {/* Avatar 3D - GRANDE */}
           <div style={{
             flex: 1,
-            backgroundColor: "#1e293b",
+            backgroundColor: "#F2F2F7",
             padding: "16px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center"
           }}>
+            {/* #F2F2F7 */}
             <div style={{
               width: "100%",
               height: "100%",
@@ -486,10 +487,10 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
           {/* Botones de palabras */}
           <div style={{
             padding: "16px",
-            backgroundColor: "rgba(30, 41, 59, 0.5)",
-            borderTop: "1px solid #334155"
+            backgroundColor: "rgba(242, 242, 247, 0.5)",
+            // borderTop: "1px solid #334155"
           }}>
-            <p style={{ color: "#94a3b8", fontSize: "0.75rem", marginBottom: "12px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+            <p style={{ color: "#334155", fontSize: "0.85rem", fontWeight: "bold", marginBottom: "12px", textTransform: "uppercase", letterSpacing: "0.05em", paddingLeft: "15px"}}>
               Selecciona una seña:
             </p>
             <div style={{
@@ -497,7 +498,8 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
               flexWrap: "wrap",
               gap: "8px",
               maxHeight: "120px",
-              overflowY: "auto"
+              overflowY: "auto",
+              paddingLeft: "15px"
             }}>
               {SIGNS.map((sign) => (
                 <button
@@ -534,7 +536,7 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
           <div style={{
             flex: 1,
             position: "relative",
-            backgroundColor: "#000"
+            backgroundColor: "#F2F2F7"
           }}>
             <video
               ref={videoRef}
@@ -577,7 +579,7 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                backgroundColor: "#1e293b",
+                backgroundColor: "#b6bac0ff",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -627,16 +629,16 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
               zIndex: 3
             }}>
               <span style={{ color: "white", fontSize: "0.875rem" }}>
-                🎯 Objetivo: <strong>{selectedSign.toUpperCase()}</strong>
+                Objetivo: <strong>{selectedSign.toUpperCase()}</strong>
               </span>
             </div>
           </div>
 
           {/* Feedback */}
           <div style={{
-            backgroundColor: "#1e293b",
+            backgroundColor: "#f2f2f7",
             padding: "16px",
-            borderTop: "1px solid #334155",
+            //borderTop: "1px solid #334155",
             minHeight: "60px",
             display: "flex",
             alignItems: "center",
@@ -647,9 +649,9 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
 
           {/* Controles */}
           <div style={{
-            backgroundColor: "rgba(30, 41, 59, 0.5)",
+            backgroundColor: "rgba(242, 242, 247, 0.5)",
             padding: "16px",
-            borderTop: "1px solid #334155"
+            // borderTop: "1px solid #334155"
           }}>
             <div style={{
               display: "flex",
@@ -657,7 +659,7 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
               justifyContent: "center",
               gap: "16px",
               maxWidth: "400px",
-              margin: "0 auto"
+              margin: "0 auto",
             }}>
 
               <button
@@ -690,7 +692,7 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
                   fontWeight: 700,
                   fontSize: "1.125rem",
                   cursor: !isCameraOn ? "not-allowed" : "pointer",
-                  boxShadow: isCameraOn ? "0 4px 12px rgba(0,0,0,0.3)" : "none",
+                  boxShadow: isCameraOn ? "0 4px 12px rgba(68, 203, 149, 0.3)" : "none",
                   transition: "all 0.15s",
                   backgroundColor: !isCameraOn 
                     ? "#334155" 
@@ -704,7 +706,7 @@ export function PracticeMode({ onBack }: PracticeModeProps) {
                   ? "Validando..."
                   : isRecording
                     ? "⏹ Detener y Validar"
-                    : "✨ Intentar Seña"}
+                    : "Intentar Seña"}
               </button>
             </div>
           </div>

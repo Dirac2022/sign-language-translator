@@ -667,7 +667,7 @@ return (
               onClick={ handleTranslate }
               disabled={sentence.length === 0 || isTranslating}
           >
-              {isTranslating ? "✨ Procesando...": "✨ Traducir Frase a lenguaje natural"}
+              {isTranslating ? "Procesando...": "Traducir Frase a lenguaje natural"}
           </Button>
         </div>
 

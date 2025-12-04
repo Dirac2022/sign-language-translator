@@ -10,8 +10,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
     <div className="flex flex-col h-full bg-[#F2F2F7] pb-16">
       {/* Header */}
       <div className="bg-white px-6 pt-12 pb-6 shadow-sm">
-        <h1 className="text-2xl mb-2">Hola 👋</h1>
-        <p className="text-[#8E8E93]">Bienvenido a ConnectSigns</p>
+        {/* <h1 className="text-2xl mb-2">Hola 👋</h1> */}
+        {/* <h1 className="text-[#8E8E93]">Bienvenido a ConnectSigns</h1> */}
+        <h1 className="text-2xl mb-2">Bienvenido a ConnectSigns</h1>
       </div>
 
       {/* Main Content */}
