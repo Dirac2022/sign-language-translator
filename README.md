@@ -2,6 +2,7 @@
   # ConnectSigns App Design Brief
 
   Fronted del proyecto - Curso: Interaccion Humano Computador
+  
   Profesor: Ciro Nuñez
 
   ## Para correr el fronted:
